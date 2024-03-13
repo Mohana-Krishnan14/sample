@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<script>
+const marks = [100,100,80];
+var summ = 0;
+
+function calculateGrade(){
+    
+    for(let i=0; i<=marks.length;i++){
+       
+        summ = summ+marks[i];
+        var avg = (summ/marks.length);  
+    }
+    
+    if(avg<=59){
+        console.log('F');
+    }
+    else if(avg>=60 && avg<=69){
+        console.log('D');
+    }
+    else if(avg>=70 && avg<=79){
+        console.log('C');
+    }
+    else if(avg>=80 && avg<=89){
+        console.log('B');
+    }
+    else if(avg>=90 && avg<=100){
+        console.log('A');
+    }
+}
+
+console.log(calculateGrade(marks));
+</script>
+</head>
+<body>
+
+<p>Enter the Number: <input id="num"><button onclick="calculateGrade()">Check</button></p>
+
+
+</body>
+</html>
